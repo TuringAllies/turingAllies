@@ -16,5 +16,6 @@ namespace :csv_load do
       )
     end
     ActiveRecord::Base.connection.reset_pk_sequence!("employers")
+    puts "all done!"
   end
 end

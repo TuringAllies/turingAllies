@@ -41,6 +41,15 @@ If you want to contribute to a project while you're on the job search, you're mo
     rails db:create db:migrate
     ```
 
+    Next, populate the database with some seed data by running this command in your command line:
+
+    ```
+    rake csv_load:populate_employers
+    ```
+
+    If you've done this successfully, you'll see `all done!` in the command line
+
+
 * How to run the test suite
     - no test suite (yet)
 
