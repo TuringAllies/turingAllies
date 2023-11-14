@@ -66,3 +66,5 @@ end
 gem "tailwindcss-rails", "~> 2.0"
 
 gem "view_components", "~> 0.1.0"
+
+gem "rails_live_reload", "~> 0.3.4"
