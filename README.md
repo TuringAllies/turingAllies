@@ -1,24 +1,23 @@
 # README
 
-# What is in this repo, you ask? 
+# What is in this repo:
 
 - The source code for `Turing Allies`
 
 # What is `Turing Allies`?
 
-It's an Open Source Project built by students/alum, for students/alum
+It's an Open Source Project built by us, for us
 
-# What does it do? 
+# What does it do?
 
-It allows job-seekers to add a Company's name that's interviewed them. 
+The goal is to gather a list of companies who have:
 
-And it allows job-seekers to browse Company's that are potential employers. 
+1. Recently Hired Students, or
+2. Recently Interviewed Students
 
-This way we're able to locate those companies who were **bold** enough (and smart enough) to consider Turing students/grads as potential employees. 
+# What do you expect me to share about my interview?
 
-# What do you expect me to share about my interview? 
-
-Only what you're comfortable sharing. Hopefully, at a minimum, that's the company name that you spoke with. Beyond that, everything else is optional. 
+Only what you're comfortable sharing. Hopefully -- at a minimum -- the company name. Beyond that, everything else is optional.
 
 # So what do I do with this repo?
 
@@ -28,7 +27,7 @@ If you want to contribute to a project while you're on the job search, you're mo
 
 * Ruby version 3.1.4 and Rails 7.1.2
 
-* Configuration: 
+* Configuration:
     -   after you `fork` and/or `clone` to repo to your machine, run:
 
     ```
@@ -36,7 +35,7 @@ If you want to contribute to a project while you're on the job search, you're mo
     # or `bundle install` (they do the same thing)
     ```
 
-    you'll also need to create/migrate the database
+    you'll also need to create/migrate the database, which is running PostgresQL. (What the heck is [PostgresQL](https://github.com/TuringAllies/turingAllies/docs/postgres.md)?)
 
     ```
     rails db:create db:migrate
