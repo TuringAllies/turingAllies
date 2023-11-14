@@ -35,7 +35,7 @@ If you want to contribute to a project while you're on the job search, you're mo
     # or `bundle install` (they do the same thing)
     ```
 
-    you'll also need to create/migrate the database, which is running PostgresQL. (What the heck is [PostgresQL](https://github.com/TuringAllies/turingAllies/docs/postgres.md)?)
+    you'll also need to create/migrate the database, which is running PostgresQL. (What the heck is [PostgresQL](https://github.com/TuringAllies/turingAllies/blob/main/docs/postgres.md)?)
 
     ```
     rails db:create db:migrate
