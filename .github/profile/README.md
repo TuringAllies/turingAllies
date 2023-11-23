@@ -2,6 +2,8 @@
 
 <a name="readme-top"></a>
 
+changes
+
 <!--
 *** Thanks for checking out the Battleship. If you have a suggestion
 *** that would make this better, please fork the repo and create a pull request
