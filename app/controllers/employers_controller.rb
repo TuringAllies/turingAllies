@@ -1,5 +1,5 @@
 class EmployersController < ApplicationController
   def index
-    @employers = Employer.all
+    @employers = Employer.sort_by_name
   end
 end

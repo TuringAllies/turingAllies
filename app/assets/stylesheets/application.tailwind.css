@@ -11,3 +11,18 @@
 }
 
 */
+
+
+.welcome-card {
+  padding: 2em;
+  border: 1px solid black;
+}
+
+.welcome-card > p {
+  padding: 10px;
+  text-align: center;
+}
+
+.welcome-card > h1 {
+  text-align: center;
+}
