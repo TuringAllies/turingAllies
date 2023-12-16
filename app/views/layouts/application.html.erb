@@ -10,8 +10,9 @@
     <%= javascript_importmap_tags %>
   </head>
   <body>
+    <%= render HeaderComponent.new %>
     <%= render NavbarComponent.new %>
-    <main class="mt-28 justify-center min-h-screen flex">
+    <main class="mt-28 justify-center min-h-screen flex container mx-auto">
       <%= yield %>
     </main>
   </body>
