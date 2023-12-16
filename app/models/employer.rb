@@ -1,4 +1,3 @@
 class Employer < ApplicationRecord
-  # Ex:- scope :active, -> {where(:active => true)}
-  scope :sort_by_name, -> { all.sort }
+  scope :sort_by_name, -> { distinct(:name).order(:name) }
 end

@@ -5,6 +5,9 @@ namespace :csv_load do
   task populate_employers: :environment do
     CSV.foreach("./db/data/recent_hires.csv", headers: true) do |row|
       data = row.to_hash
+      if data["Location City"].nil?
+        data["Location City"] = "unknown"
+      end
       Employer.create!(
         name: data["Company Name"],
         city: data["Location City"],
@@ -12,7 +15,7 @@ namespace :csv_load do
         description: data["Description"],
         website: data["Website"],
         industry: data["Industry"],
-        employees: data["Company Size"],
+        employees: data["Company Size"]
       )
     end
     ActiveRecord::Base.connection.reset_pk_sequence!("employers")
