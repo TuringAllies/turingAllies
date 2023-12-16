@@ -1,24 +1,24 @@
 <div class="flex flex-col border">
   <div>
     <%= turbo_frame_tag "add_employer" do %>
-      <%= render AddEmployerComponent.new %>
+      <%= render AddEmployerFormComponent.new %>
     <% end %>
   </div>
   <h1 class="font-bold text-4xl">Employers</h1>
   <div id="table">
-    <table class="table-auto">
-      <thead>
-        <tr>
-          <th>Employer Name</th>
-          <th>City</th>
-          <th><%= link_to "State", sort: "state" %>State</th>
-          <th>Website</th>
-          <th>Industry</th>
-          <th># of Employees</th>
-        </tr>
-      </thead>
-      <tbody>
-        <%= turbo_frame_tag "employers" do %>
+    <%= turbo_frame_tag "employers" do %>
+      <table class="table-auto">
+        <thead>
+          <tr>
+            <th>Employer Name</th>
+            <th>City</th>
+            <th><%= link_to "State", sort: "state" %></th>
+            <th>Website</th>
+            <th>Industry</th>
+            <th># of Employees</th>
+          </tr>
+        </thead>
+        <tbody>
           <% @employers.each do |employer| %>
             <tr>
               <td><%= employer.name %></td>
@@ -29,8 +29,8 @@
               <td><%= employer.employees %></td>
             </tr>
           <% end %>
-        <% end %>
-      </tbody>
-    </table>
+        </tbody>
+      </table>
+    <% end %>
   </div>
 </div>

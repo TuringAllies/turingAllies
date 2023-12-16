@@ -1,4 +1,30 @@
 <%= turbo_stream.update "employers" do %>
-  <p>this would be better as a flash message</p>
-  <p><%= @employer.name %></p>
+  <h1>Added to database</h1>
+  <table class="table-auto">
+    <thead>
+      <tr>
+        <th>Employer Name</th>
+        <th>City</th>
+        <th><%= link_to "State", sort: "state" %></th>
+        <th>Website</th>
+        <th>Industry</th>
+        <th># of Employees</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @employers.each do |employer| %>
+        <tr>
+          <td><%= employer.name %></td>
+          <td><%= employer.city %></td>
+          <td><%= employer.state %></td>
+          <td><%= link_to "#{employer.website}", employer.website %></td>
+          <td><%= employer.industry %></td>
+          <td><%= employer.employees %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 <% end %>
+
+
+<%= turbo_stream.prepend "flash", partial: "layouts/flash" %>
