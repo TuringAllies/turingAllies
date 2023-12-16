@@ -12,11 +12,9 @@
   <body>
     <%= render HeaderComponent.new %>
     <%= render NavbarComponent.new %>
-    <% if flash[:success] %>
-    <div>
-      <%= flash[:success] %>
+    <div id="flash" class="flash">
+      <%= render "layouts/flash" %>
     </div>
-    <% end %>
     <main class="mt-28 justify-center min-h-screen flex container mx-auto">
       <%= yield %>
     </main>

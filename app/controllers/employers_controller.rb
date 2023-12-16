@@ -10,11 +10,12 @@ class EmployersController < ApplicationController
     @employer = Employer.new(employer_params)
 
     if @employer.save
-      flash[:success] = "Congrats! #{@employer.name} has been added to the list"
-      redirect_to index
+      @employers = Employer.sort_by_name
+      respond_to do |format|
+        format.turbo_stream { flash.now[:success] = "The employer #{@employer.name} was successfully added." }
+      end
     else
-      render index
-      flash[:alert] = "please try again"
+      render index, alert: "Please try again"
     end
   end
 
