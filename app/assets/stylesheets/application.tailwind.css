@@ -2,16 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-/*
-
 @layer components {
-  .btn-primary {
-    @apply py-2 px-4 bg-blue-200;
+  a {
+    color: blue;
+    text-decoration: underline;
   }
 }
 
-*/
+@layer base {
+  .btn {
+    @apply font-bold py-2 px-4 rounded;
+  }
 
+  .btn-blue {
+    @apply bg-blue-500 text-white;
+  }
+
+  .btn-blue:hover {
+    @apply bg-blue-700;
+  }
+}
 
 .welcome-card {
   padding: 2em;
@@ -25,4 +35,12 @@
 
 .welcome-card > h1 {
   text-align: center;
+}
+
+#add_employer .table > tbody {
+  text-align: right;
+}
+
+#add_employer {
+  border: 1px 1px solid;
 }

@@ -1,0 +1,36 @@
+  <%= turbo_frame_tag "add_employer_form" do %>
+  <div class="border p-3">
+    <h1 class="text-2xl">Add an Employer</h1>
+    <%= form_with scope: @employer, url: employers_path, method: :post, class: "flex justify-center" do |form| %>
+      <table class="table" id="add_employer">
+        <tr>
+          <td><%= form.label :name %></td>
+          <td><%= form.text_field :name %></td>
+        </tr>
+        <tr>
+          <td><%= form.label :city %></td>
+          <td><%= form.text_field :city %></td>
+        </tr>
+        <tr>
+          <td><%= form.label :state %></td>
+          <td><%= form.text_field :state %></td>
+        </tr>
+        <tr>
+          <td><%= form.label :website %></td>
+          <td><%= form.text_field :website %></td>
+        </tr>
+        <tr>
+          <td><%= form.label :industry %></td>
+          <td><%= form.text_field :industry %></td>
+        </tr>
+        <tr>
+          <td><%= form.label :employees %></td>
+          <td><%= form.text_field :employees %></td>
+        </tr>
+        <tr>
+          <td><%= form.submit "Add company", class: "btn btn-blue" %></td>
+        </tr>
+      </table>
+    <% end %>
+  </div>
+<% end %>
