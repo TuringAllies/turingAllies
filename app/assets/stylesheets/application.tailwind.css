@@ -45,16 +45,6 @@
   border: 1px 1px solid;
 }
 
-@keyframes appear-then-fade {
-  0%,
-  100% {
-    opacity: 0;
-  }
-  5%,
-  60% {
-    opacity: 1;
-  }
-}
 .flash {
   position: fixed;
   top: 5rem;
@@ -75,7 +65,6 @@
     color: var(--color-white);
     padding: var(--space-xs) var(--space-m);
     background-color: var(--color-dark);
-    animation: appear-then-fade 4s both;
     border-radius: 999px;
   }
 }
