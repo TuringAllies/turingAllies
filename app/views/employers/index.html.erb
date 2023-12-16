@@ -9,7 +9,7 @@
         <tr>
           <th>Employer Name</th>
           <th>City</th>
-          <th>State</th>
+          <th><%= link_to "State", sort: "state" %>State</th>
           <th>Website</th>
           <th>Industry</th>
           <th># of Employees</th>
@@ -21,7 +21,7 @@
             <td><%= employer.name %></td>
             <td><%= employer.city %></td>
             <td><%= employer.state %></td>
-            <td><%= employer.website %></td>
+            <td><%= link_to "#{employer.website}", employer.website %></td>
             <td><%= employer.industry %></td>
             <td><%= employer.employees %></td>
           </tr>
