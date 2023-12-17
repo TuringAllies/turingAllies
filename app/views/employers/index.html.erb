@@ -1,19 +1,18 @@
-<div class="flex flex-col border">
+<div class="flex flex-col">
   <div>
     <%= turbo_frame_tag "add_employer" do %>
       <%= render AddEmployerFormComponent.new %>
     <% end %>
   </div>
   <h1 class="font-bold text-4xl">Employers</h1>
-  <div id="table">
+  <div id="employers-table" class="p-4">
     <%= turbo_frame_tag "employers" do %>
-      <table class="table-auto">
+      <table class="table-auto max-w-xl">
         <thead>
           <tr>
             <th>Employer Name</th>
             <th>City</th>
             <th><%= link_to "State", sort: "state" %></th>
-            <th>Website</th>
             <th>Industry</th>
             <th># of Employees</th>
           </tr>
@@ -21,16 +20,18 @@
         <tbody>
           <% @employers.each do |employer| %>
             <tr>
-              <td><%= employer.name %></td>
+              <td><%= link_to "#{employer.name}", employer.website %></td>
               <td><%= employer.city %></td>
               <td><%= employer.state %></td>
-              <td><%= link_to "#{employer.website}", employer.website %></td>
               <td><%= employer.industry %></td>
               <td><%= employer.employees %></td>
             </tr>
           <% end %>
         </tbody>
       </table>
+      <div class="flex justify-center p-4 mt-4" data-controller="pagy-initializer">
+        <%== pagy_nav(@pagy) %>
+      </div>
     <% end %>
   </div>
 </div>

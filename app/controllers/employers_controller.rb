@@ -1,6 +1,6 @@
 class EmployersController < ApplicationController
   def index
-    @employers = Employer.sort_by_name
+    @pagy, @employers = pagy(Employer.sort_by_name)
   end
 
   def new
