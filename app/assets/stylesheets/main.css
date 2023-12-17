@@ -59,3 +59,12 @@
 #employers-table td {
   padding: 1rem;
 }
+
+.about-section {
+  border: 1px solid black;
+  padding: 2rem;
+}
+
+.about-section h1 {
+  margin-bottom: 1rem;
+}
