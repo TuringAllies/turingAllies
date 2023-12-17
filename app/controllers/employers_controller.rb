@@ -10,7 +10,7 @@ class EmployersController < ApplicationController
     @employer = Employer.new(employer_params)
 
     if @employer.save
-      @employers = Employer.sort_by_name
+      @pagy, @employers = pagy(Employer.sort_by_name)
       respond_to do |format|
         format.turbo_stream { flash.now[:success] = "The employer #{@employer.name} was successfully added." }
       end
