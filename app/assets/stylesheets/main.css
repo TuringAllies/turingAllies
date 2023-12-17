@@ -46,3 +46,16 @@
     border-radius: 999px;
   }
 }
+
+#brand-logo {
+  color: black;
+}
+
+.responsive-image {
+  width: 10%;
+  height: auto;
+}
+
+#employers-table td {
+  padding: 1rem;
+}

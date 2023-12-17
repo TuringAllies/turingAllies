@@ -1,5 +1,4 @@
-
-<div class="border p-3">
+<div class="p-3">
   <h1 class="text-2xl">Add an Employer</h1>
   <%= form_with scope: @employer, url: employers_path, method: :post, data: { controller: "reset-form", action: "turbo:submit-end->reset-form#reset" },class: "flex justify-center" do |form| %>
     <table class="table" id="add_employer">
@@ -27,8 +26,9 @@
         <td><%= form.label :employees %></td>
         <td><%= form.text_field :employees %></td>
       </tr>
-      <tr>
-        <td><%= form.submit "Add company", class: "btn btn-blue" %></td>
+      <tr class="text-center" id="submit-button-tr">
+        <td></td>
+        <td class="p-3"><%= form.submit "Add company", class: "btn btn-blue" %></td>
       </tr>
     </table>
   <% end %>

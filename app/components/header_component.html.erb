@@ -1,7 +1,9 @@
 <div class="border bg-slate-400 flex justify-between">
-  <h1 class="ml-4 text-4xl p-2"><%= link_to "Turing Allies", root_path %></h1>
+  <div class="flex items-center">
+    <%= image_tag 'gears.jpg', class: "responsive-image" %>
+    <h1 class="ml-4 text-4xl p-2 font-bold"><%= link_to "Turing Allies", root_path, id: "brand-logo" %></h1>
+  </div>
   <div class="mr-4 p-2">
     <%= link_to "Login", employers_path, class: "p-2" %>
   </div>
 </div>
-

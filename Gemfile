@@ -69,3 +69,5 @@ gem "tailwindcss-rails", "~> 2.0"
 gem "rails_live_reload", "~> 0.3.4"
 
 gem "view_component", "~> 3.7"
+
+gem "pagy", "~> 6.2"
