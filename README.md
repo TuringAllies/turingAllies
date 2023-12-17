@@ -32,18 +32,19 @@
   <h1 align="center">Turing Allies</h1>
 
   <p align="center">
-    An Open Source project for students to use or contribute to
+    An Open Source project for students to use <i>or</i> contribute to
     <br />
-    <img src="" alt="logo stuff">
+    <br />
+    <img src="app/assets/images/gears.jpg" alt="logo stuff" style="width:500px;height:auto" >
     <br />
     <a href=""><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="">View Demo</a>
     ·
-    <a href="">Report Bug</a>
+    <a href="https://github.com/TuringAllies/turingAllies/issues/new?assignees=&labels=&projects=&template=bug_report.md&title=">Report Bug</a>
     ·
-    <a href="">Request Feature</a>
+    <a href="https://github.com/TuringAllies/turingAllies/issues/new?assignees=&labels=&projects=&template=feature_request.md&title=">Request Feature</a>
   </p>
 </div>
 
@@ -143,7 +144,7 @@ Or just use the website. That's fine too.
     ```bash
     rails db:migrate
     ```
-6. Precompile the assets
+6. Precompile the assets (this might not be necessary; see [this doc](https://github.com/TuringAllies/turingAllies/blob/main/docs/issues_with_assets.md) for more details)
     ```bash
     bundle exec rake assets:precompile
     ```
@@ -161,10 +162,10 @@ Or just use the website. That's fine too.
 
 ## Usage
 
-To spin this project up, run the following command from the command line:
+To spin up this project, run the following command from the command line:
 
 ```
-rails s
+bin/dev
 ```
 
 navigation to `localhost:3000` and see the website there
