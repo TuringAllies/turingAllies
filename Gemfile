@@ -73,3 +73,11 @@ gem "view_component", "~> 3.7"
 gem "pagy", "~> 6.2"
 
 gem "devise", "~> 4.9"
+
+gem 'omniauth-github', '~> 2.0.0'
+
+gem 'figaro', '~> 1.2'
+
+gem "omniauth-rails_csrf_protection", "~> 1.0"
+
+gem "rack-cors", "~> 2.0"

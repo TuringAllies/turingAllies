@@ -4,6 +4,6 @@
     <h1 class="ml-4 text-4xl p-2 font-bold"><%= link_to "Turing Allies", root_path, id: "brand-logo" %></h1>
   </div>
   <div class="mr-4 p-2">
-    <%= link_to "Login", employers_path, class: "p-2" %>
+    <%= button_to "Login with Github", user_github_omniauth_authorize_path, method: :post, class: "p-2", data: {turbo: false} %>
   </div>
 </div>
