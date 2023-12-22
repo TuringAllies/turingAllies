@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   root "welcome#index"
+  get "users/index"
+  get "users/show"
+  devise_for :users, controllers: {omniauth_callbacks: "/users/omniauth_callbacks"}
 
   get "about", to: "about#index", as: :about
   get "interviewers/index"
