@@ -10,7 +10,7 @@
     <%= javascript_importmap_tags %>
   </head>
   <body>
-    <%= render HeaderComponent.new %>
+    <%= render HeaderComponent.new(current_user: current_user) %>
     <%= render NavbarComponent.new %>
     <div id="flash" class="flash">
       <%= render "layouts/flash" %>
