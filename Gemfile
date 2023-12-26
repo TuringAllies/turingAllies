@@ -72,7 +72,6 @@ gem "view_component", "~> 3.7"
 
 gem "pagy", "~> 6.2"
 
-<<<<<<< HEAD
 gem "devise", "~> 4.9"
 
 gem 'omniauth-github', '~> 2.0.0'
@@ -82,6 +81,4 @@ gem 'figaro', '~> 1.2'
 gem "omniauth-rails_csrf_protection", "~> 1.0"
 
 gem "rack-cors", "~> 2.0"
-=======
 gem "rspec-rails", "~> 6.1", :group => :test
->>>>>>> 11492d4e156648e9beac487d91cdc1763aeb4337
