@@ -154,7 +154,22 @@ Or just use the website. That's fine too.
     bundle exec rake csv_load:populate_employers
     ```
 
-* step 7 does the following: loads a list of employers who have hired Turing grads, as of 11/22/2023. It's converting a list of data published by Turing into ActiveRecord objects.
+8. Copy the file title `application.sample.yml` and rename it `application.yml`
+
+   ```bash
+   cp config/application.sample.yml config/application.yml
+   ```
+
+9. Add the `CLIENT_ID` and `CLIENT_SECRET` to `application.yml`
+
+  - This step is necessary to enable Omniauth with Github locally
+  - in the Github repo for the turingAllies [ORGANIZATION](https://github.com/TuringAllies) go to [Settings](https://github.com/organizations/TuringAllies/settings/profile)
+  - click on "Developer Settings"
+  - select "OAuth apps"
+  - click "turingAllies"
+  - copy the `CLIENT_ID` and paste it in your `application.yml` file
+  - do the same with the `CLIENT_SECRET`
+  - If you run into any issues with this, DM me on Turing's Slack
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -170,8 +185,26 @@ bin/dev
 
 navigation to `localhost:3000` and see the website there
 
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- DEBUGGING EXAMPLES -->
+
+## Debugging
+
+To debug this project, DO NOT start the app with `bin/dev`.
+
+Instead, start the app with the typical
+
+```
+rails server
+```
+
+Then add a `debugger` anywhere in the code to hit the binding.
+
+To learn more about the default debugger gem in Rails 7 apps, head over to [the debug gem](https://github.com/ruby/debug)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- CONTRIBUTING -->
 
 ## Contributing
