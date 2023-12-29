@@ -157,7 +157,7 @@ Or just use the website. That's fine too.
 8. Copy the file title `application.sample.yml` and rename it `application.yml`
 
    ```bash
-   cp application.sample.yml application.yml
+   cp config/application.sample.yml config/application.yml
    ```
 
 9. Add the `CLIENT_ID` and `CLIENT_SECRET` to `application.yml`
