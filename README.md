@@ -49,7 +49,7 @@
 </div>
 
 <!-- TABLE OF CONTENTS -->
-<details close>
+<div style="width:200px;margin:0 auto;padding:1rem;">
   <summary>Table of Contents</summary>
   <ol>
     <li>
@@ -66,29 +66,37 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
+    <li><a href="#debugging">Debugging</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
-</details>
+</div>
+
 <!-- ABOUT THE PROJECT -->
 
 ## About The Project
 
-This is an Open Source project created by Turing students.
+This is an Open Source project created by Turing students
 
 It started with a simple idea:
 
-> create a platform/website/service for Students to see which companies have either interviewed or hired Turing students
+> create a platform/website or service for Students to see companies that have interviewed or hired Turing students
 
-While the job hunt can be long and difficult, it's important to know where to look for companies that have taken a risk on a Turing graduate.
+While the job hunt can be long and difficult, part of the price of admission to Turing is access to it's existing, never-ending network of alumni.
 
-At the same time, it's also important to continue to code, and build and contribute to Open Source projects.
+Just like we supported each other through the program itself, I'd like to believe we continue to support each other professionally through the duration of our careers.
+
+At the same time, it's also important to continue to code, build and contribute to Open Source projects.
+
+The amount of complex logic I've ever needed for my day to day job is null. The most complex logic I've ever really had to use is "if this, do this, else, do that". Spending hours doing code challenges is, IMO, less beneficial than building.
 
 Contributing to an Open Source project can be intimidating, especially when you've never done it before.
 
-If you'd like to work on building this project while you also search for a job, that's awesome!
+This project, no matter how inactive, is 100% built by Turing grads and students. You're never out of place by creating a PR for this project. There are safeguards in place that prevent you from ruining anything.
+
+If you'd like to improve, work on, or suggest something for this project while you also search for a job, that's awesome!
 
 Contribute one small thing (whatever you suggest will most likely be merged in) and then you can put it on your resume!
 
@@ -103,6 +111,7 @@ Or just use the website. That's fine too.
 ### Built With
 
 -   [![Ruby][ruby.com]][ruby-url]
+-   [![Rails][rails.com]][rails-url]
 -   [![Rspec][rspec.com]][rspec-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -267,13 +276,15 @@ Use this space to list resources you find helpful and would like to give credit 
 [issues-shield]: https://img.shields.io/github/issues/TuringAllies/turingAllies?style=for-the-badge
 [issues-url]: https://github.com/TuringAllies/turingAllies/issues
 [license-shield]: https://img.shields.io/github/license/TuringAllies/turingAllies.svg?style=for-the-badge
-[license-url]: https://github.com/TuringAllies/turingAllies/blob/master/LICENSE.txt
+[license-url]: https://github.com/TuringAllies/turingAllies/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/mmarchand1/
 [product-screenshot]: images/screenshot.png
 [bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [bootstrap-url]: https://getbootstrap.com
-[ruby.com]: https://img.shields.io/badge/ruby-v2.7.4-red
+[ruby.com]: https://img.shields.io/badge/ruby-v3.1.4-red
 [ruby-url]: https://ruby-doc.org/core-2.7.2/
+[rails.com]: https://img.shields.io/badge/rails-v7.1.2-red
+[rails-url]: https://api.rubyonrails.org/
 [rspec.com]: https://img.shields.io/badge/rspec-v3.12-success
 [rspec-url]: https://rspec.info/documentation/
