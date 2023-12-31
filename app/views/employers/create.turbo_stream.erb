@@ -1,12 +1,10 @@
 <%= turbo_stream.update "employers" do %>
-  <h1>Added to database</h1>
-  <table class="table-auto">
+  <table class="table-fixed">
     <thead>
       <tr>
         <th>Employer Name</th>
         <th>City</th>
         <th><%= link_to "State", sort: "state" %></th>
-        <th>Website</th>
         <th>Industry</th>
         <th># of Employees</th>
       </tr>
@@ -14,18 +12,13 @@
     <tbody>
       <% @employers.each do |employer| %>
         <tr>
-          <td><%= employer.name %></td>
+          <td><%= link_to "#{employer.name}", employer.website %></td>
           <td><%= employer.city %></td>
           <td><%= employer.state %></td>
-          <td><%= link_to "#{employer.website}", employer.website %></td>
           <td><%= employer.industry %></td>
           <td><%= employer.employees %></td>
         </tr>
       <% end %>
     </tbody>
   </table>
-  <div class="flex justify-center p-4 mt-4" data-controller="pagy-initializer">
-    <%== pagy_nav(@pagy) %>
-  </div>
 <% end %>
-<%= turbo_stream.prepend "flash", partial: "layouts/flash" %>
