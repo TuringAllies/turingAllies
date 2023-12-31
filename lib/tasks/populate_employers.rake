@@ -8,6 +8,9 @@ namespace :csv_load do
       if data["Location City"].nil?
         data["Location City"] = "unknown"
       end
+      if data["Location State"].nil?
+        data["Location State"] = "unknown"
+      end
       Employer.create!(
         name: data["Company Name"],
         city: data["Location City"],
