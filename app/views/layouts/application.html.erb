@@ -12,9 +12,9 @@
   <body>
     <%= render HeaderComponent.new(current_user: current_user) %>
     <%= render NavbarComponent.new %>
-    <div id="flash" class="flash">
+    <turbo-frame id="flash">
       <%= render "layouts/flash" %>
-    </div>
+    </turbo-frame>
     <main class="mt-28 justify-center min-h-screen flex container mx-auto">
       <%= yield %>
     </main>
