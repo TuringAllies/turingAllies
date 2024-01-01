@@ -1,5 +1,7 @@
-<% flash.each do |flash_type, message| %>
-  <div class="flash_class">
-    <%= message %>
-  </div>
-<% end %>
+<div class="text-center mt-20">
+  <% flash.each do |type, message| %>
+    <div>
+      <%= message %>
+    </div>
+  <% end %>
+</div>
