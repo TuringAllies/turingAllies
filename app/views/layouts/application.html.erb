@@ -10,14 +10,14 @@
     <%= javascript_importmap_tags %>
   </head>
   <body>
-    <%= render HeaderComponent.new(current_user: current_user) %>
-    <%= render NavbarComponent.new %>
-    <turbo-frame id="flash">
-      <%= render "layouts/flash" %>
-    </turbo-frame>
-    <main class="mt-28 justify-center min-h-screen flex container mx-auto">
+    <main class="flex-col">
+      <%= render HeaderComponent.new(current_user: current_user) %>
+      <%= render NavbarComponent.new %>
+      <turbo-frame id="flash">
+        <%= render "layouts/flash" %>
+      </turbo-frame>
       <%= yield %>
+      <%= render NavbarComponent.new %>
     </main>
-    <%= render NavbarComponent.new %>
   </body>
 </html>

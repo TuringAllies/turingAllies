@@ -1,16 +1,12 @@
-<div class="border bg-slate-400 flex justify-between">
-  <div class="flex items-center">
-    <%= image_tag 'gears.jpg', class: "responsive-image" %>
-    <h1 class="ml-4 text-4xl p-2 font-bold"><%= link_to "Turing Allies", root_path, id: "brand-logo" %></h1>
-  </div>
-  <div class="mr-4 p-2">
-    <% if @current_user %>
-      hello <%= @current_user.name %>
-      <%= link_to "Sign out", destroy_user_session_path, data: {turbo_method: :delete} %>
-    <% else %>
-      <%= button_to "Login with Github", user_github_omniauth_authorize_path, class: "p-2", data: {turbo: false} %>
-      <%= link_to "Log in", new_user_session_path %>
-      <%= link_to "Sign Up", new_user_registration_path %>
-    <% end %>
-  </div>
+<div class="bg-slate-400 flex">
+  <%= image_tag 'gears.jpg', class: "responsive-image" %>
+  <h1 class="ml-4 text-4xl p-2 font-bold"><%= link_to "Turing Allies", root_path, id: "brand-logo" %></h1>
+  <% if @current_user %>
+    hello <%= @current_user.name %>
+    <%= link_to "Sign out", destroy_user_session_path, data: {turbo_method: :delete} %>
+  <% else %>
+    <%= button_to "Login with Github", user_github_omniauth_authorize_path, class: "p-2", data: {turbo: false} %>
+    <%= link_to "Log in", new_user_session_path %>
+    <%= link_to "Sign Up", new_user_registration_path %>
+  <% end %>
 </div>
