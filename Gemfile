@@ -85,3 +85,5 @@ gem "omniauth-rails_csrf_protection", "~> 1.0"
 gem "rack-cors", "~> 2.0"
 
 gem "dockerfile-rails", ">= 1.6", :group => :development
+
+gem "faker", "~> 3.5"

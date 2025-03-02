@@ -102,6 +102,8 @@ GEM
       ruby2_keywords
     error_highlight (0.6.0)
     erubi (1.12.0)
+    faker (3.5.1)
+      i18n (>= 1.8.11, < 2)
     faraday (2.8.1)
       base64
       faraday-net_http (>= 2.0, < 3.1)
@@ -321,6 +323,7 @@ DEPENDENCIES
   devise (~> 4.9)
   dockerfile-rails (>= 1.6)
   error_highlight (>= 0.4.0)
+  faker (~> 3.5)
   figaro (~> 1.2)
   importmap-rails
   jbuilder
