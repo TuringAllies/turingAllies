@@ -1,3 +1,11 @@
+---
+name: Issue Ticket
+about: Suggest an idea for this project
+title: ''
+labels: ''
+assignees: ''
+
+---
 <!-- ISSUE TEMPLATE -->
 
 ## Description
