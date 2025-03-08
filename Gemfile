@@ -66,8 +66,6 @@ group :test do
   gem "rspec-rails", "~> 6.1"
 end
 
-gem "tailwindcss-rails", "~> 2.0"
-
 gem "rails_live_reload", "~> 0.3.4"
 
 gem "view_component", "~> 3.7"
@@ -87,3 +85,11 @@ gem "rack-cors", "~> 2.0"
 gem "dockerfile-rails", ">= 1.6", :group => :development
 
 gem "faker", "~> 3.5"
+
+gem "factory_bot_rails", "~> 6.4"
+
+gem "gretel", "~> 5.0"
+
+gem "bootstrap", "~> 5.3"
+
+gem "sassc-rails", "~> 2.1"

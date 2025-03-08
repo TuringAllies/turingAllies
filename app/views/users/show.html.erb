@@ -1,1 +1,9 @@
-users#show
+<% breadcrumb :user, @user %>
+
+<p class="font-bold">Profile page for: <%= @user.email %></p>
+<p>email: <%= @user.email %></p>
+<p>first_name: <%= @user.first_name %></p>
+<p>last name: <%= @user.last_name %></p>
+<p>biography: <%= @user.bio %></p>
+<p>cohort: <%= @user.cohort %></p>
+<p>program: <%= @user.program %></p>

@@ -5,19 +5,18 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
   <body>
-    <main class="flex-col">
+    <main class="container">
       <%= render HeaderComponent.new(current_user: current_user) %>
       <%= render NavbarComponent.new %>
       <turbo-frame id="flash">
         <%= render "layouts/flash" %>
       </turbo-frame>
+      <%= breadcrumbs separator: " &rsaquo; ", display_single_fragment: true, link_current: true %>
       <%= yield %>
-      <%= render NavbarComponent.new %>
     </main>
   </body>
 </html>

@@ -5,6 +5,8 @@ class User < ApplicationRecord
     :recoverable, :rememberable, :validatable
   devise :omniauthable, omniauth_providers: %i[github]
 
+  has_many :articles
+
   def self.from_omniauth(auth)
     if auth.info.email.present?
       find_or_create_by(provider: auth.provider, uid: auth.uid) do |user|

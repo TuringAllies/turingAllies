@@ -1,8 +1,6 @@
 .welcome-card {
-  padding: 2em;
   flex-basis: 33.333333%;
   display: flex;
-  flex-direction: column;
   align-items: center;
 }
 
