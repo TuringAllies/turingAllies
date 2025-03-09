@@ -1,9 +1,18 @@
-<% breadcrumb :user, @user %>
-
-<p class="font-bold">Profile page for: <%= @user.email %></p>
-<p>email: <%= @user.email %></p>
-<p>first_name: <%= @user.first_name %></p>
-<p>last name: <%= @user.last_name %></p>
-<p>biography: <%= @user.bio %></p>
-<p>cohort: <%= @user.cohort %></p>
-<p>program: <%= @user.program %></p>
+  <% breadcrumb :user, @user %>
+<div class="border border-2">
+  <h1>bio</h1>
+  <p>photo here</p>
+  <p>user actions</p>
+  <p class="font-bold"><%= @user.email %></p>
+  <p>email: <%= @user.email %></p>
+  <p>first_name: <%= @user.first_name %></p>
+  <p>last name: <%= @user.last_name %></p>
+  <p>biography: <%= @user.bio %></p>
+  <p>cohort: <%= @user.cohort %></p>
+  <p>program: <%= @user.program %></p>
+  <%= link_to "Edit", edit_user_path(@user) %>
+  <div>
+    <h1>Blog articles</h1>
+    Articles written
+  </div>
+</div>

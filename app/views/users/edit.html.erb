@@ -1,0 +1,43 @@
+<%= form_with model: @user, method: :patch, url: user_path(@user) do |form| %>
+  <div class="border border-2">
+    <div class="d-flex">
+      <div class="flex-grow-1 justify-content-end d-flex px-3">
+        <%= form.label :email %>
+      </div>
+      <div class="flex-grow-1">
+        <%= form.email_field :email %>
+      </div>
+    </div>
+    <div>
+      <div>
+        <%= form.label :name %>
+      </div>
+      <div>
+        <%= form.text_field :name %>
+      </div>
+    </div>
+    <div>
+      <div><%= form.label :first_name %></div>
+      <div><%= form.text_field :first_name %></div>
+    </div>
+    <div>
+      <div><%= form.label :last_name %></div>
+      <div><%= form.text_field :last_name %></div>
+    </div>
+    <div>
+      <div><%= form.label :cohort %></div>
+      <div><%= form.text_field :cohort %></div>
+    </div>
+    <div>
+      <div><%= form.label :program %></div>
+      <div><%= form.text_field :program %></div>
+    </div>
+    <div>
+      <div><%= form.label :bio %></div>
+      <div><%= form.text_area :bio %></div>
+    </div>
+    <div>
+      <%= form.submit %>
+    </div>
+  </div>
+<% end %>
