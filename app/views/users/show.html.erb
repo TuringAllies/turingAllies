@@ -11,8 +11,13 @@
   <p>cohort: <%= @user.cohort %></p>
   <p>program: <%= @user.program %></p>
   <%= link_to "Edit", edit_user_path(@user) %>
+  <%= link_to "New Article", new_user_article_path(@user) %>
   <div>
     <h1>Blog articles</h1>
-    Articles written
+    <% @user.articles.each do |article|  %>
+    <div>
+      <%= article.title %>
+    </div>
+    <% end %>
   </div>
 </div>
