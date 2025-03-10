@@ -15,9 +15,9 @@
   <div>
     <h1>Blog articles</h1>
     <% @user.articles.each do |article|  %>
-    <div>
-      <%= article.title %>
-    </div>
+      <div>
+        <%= link_to article.title, user_article_path(user_id: @user, id: article.id) %>
+      </div>
     <% end %>
   </div>
 </div>

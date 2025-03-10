@@ -1,0 +1,5 @@
+<% breadcrumb :articles %>
+<h1>Articles</h1>
+<% @articles.each do |article| %>
+  <%= link_to "#{article.title} by #{article.user.name}", user_article_path(user_id: article.user.id, id: article.id)  %>
+<% end %>
