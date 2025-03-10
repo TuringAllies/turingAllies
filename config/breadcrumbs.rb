@@ -11,6 +11,10 @@ crumb :user do |user|
   parent :users
 end
 
+crumb :articles do
+  link "Articles", articles_path
+end
+
 # crumb :projects do
 #   link "Projects", projects_path
 # end
