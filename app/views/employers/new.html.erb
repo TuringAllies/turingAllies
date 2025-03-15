@@ -1,0 +1,6 @@
+<% breadcrumb :new_employer %>
+<div>
+  <%= turbo_frame_tag "add_employer" do %>
+    <%= render AddEmployerFormComponent.new %>
+  <% end %>
+</div>

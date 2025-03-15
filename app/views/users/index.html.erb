@@ -1,6 +1,14 @@
 <% breadcrumb :users %>
-<ul>
+<div class="my-grid">
   <% @users.map do |user| %>
-    <li><%= link_to user.email, user_path(user) %></li>
+    <div class="card" style="width: 18rem;">
+      <img src="<%= Faker::Avatar.image %>" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><%= user.full_name %></h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <p class=""><%= link_to "#{user.first_name}'s bio", user_path(user) %></p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
   <% end %>
-</ul>
+</div>

@@ -1,19 +1,24 @@
-  <% breadcrumb :user, @user %>
-<div class="border border-2">
-  <h1>bio</h1>
-  <p>photo here</p>
-  <p>user actions</p>
-  <p class="font-bold"><%= @user.email %></p>
-  <p>email: <%= @user.email %></p>
-  <p>first_name: <%= @user.first_name %></p>
-  <p>last name: <%= @user.last_name %></p>
-  <p>biography: <%= @user.bio %></p>
-  <p>cohort: <%= @user.cohort %></p>
-  <p>program: <%= @user.program %></p>
+<% breadcrumb :user, @user %>
+<div class="pt-3">
   <%= link_to "Edit", edit_user_path(@user) %>
-  <%= link_to "New Article", new_user_article_path(@user) %>
+  <div class="d-flex justify-content-between">
+    <div class="d-flex flex-column">
+      <div class="d-flex flex-row align-items-baseline">
+        <h1><%= @user.full_name %></h1>
+        <span class="px-3"><%= @user.cohort%>/<%= @user.program %></span>
+      </div>
+      <p><%= mail_to @user.email %></p>
+    </div>
+    <div class="border border-2 d-flex align-items-center p-2">
+      photo here
+    </div>
+  </div>
+  <div class="pt-3">
+    <p><%= @user.bio %></p>
+  </div>
   <div>
-    <h1>Blog articles</h1>
+    <h2>Blog articles</h2>
+    <%= link_to "New Article", new_user_article_path(@user) %>
     <% @user.articles.each do |article|  %>
       <div>
         <%= link_to article.title, user_article_path(user_id: @user, id: article.id) %>

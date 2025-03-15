@@ -15,7 +15,7 @@
       <turbo-frame id="flash">
         <%= render "layouts/flash" %>
       </turbo-frame>
-      <div class="border border-2 container-sm">
+      <div class="border border-2 container-sm d-flex flex-column align-items-center p-4">
         <%= breadcrumbs separator: " &rsaquo; ", display_single_fragment: true, link_current: true %>
         <%= yield %>
       </div>

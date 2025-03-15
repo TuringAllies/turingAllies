@@ -9,5 +9,6 @@
 #   end
 
 20.times do |i|
-  FactoryBot.create(:user)
+  user = FactoryBot.create(:user)
+  FactoryBot.create_list(:article, rand(1..10), user: user)
 end

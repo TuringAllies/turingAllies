@@ -1,9 +1,6 @@
+<% breadcrumb :employers %>
 <div class="flex flex-col">
-  <div>
-    <%= turbo_frame_tag "add_employer" do %>
-      <%= render AddEmployerFormComponent.new %>
-    <% end %>
-  </div>
+  <%= link_to "Add an Employer", new_employer_path %>
   <h1 class="font-bold text-4xl">Employers</h1>
   <div id="employers-table" class="p-4">
     <%= turbo_frame_tag "employers" do %>

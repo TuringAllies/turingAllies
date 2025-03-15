@@ -6,6 +6,15 @@ crumb :users do
   link "Users", users_path
 end
 
+crumb :employers do
+  link "Employers", employers_path
+end
+
+crumb :new_employer do
+  link "new", new_employer_path
+  parent :employers
+end
+
 crumb :user do |user|
   link user.email, user_path(user)
   parent :users
