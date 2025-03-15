@@ -9,8 +9,12 @@
       </div>
       <p><%= mail_to @user.email %></p>
     </div>
-    <div class="border border-2 d-flex align-items-center p-2">
-      photo here
+    <div class="d-flex align-items-center p-2">
+      <% if @user.avatar.attached? %>
+        <%= image_tag @user.avatar, width: 100 %>
+      <% else %>
+        <%= image_tag Faker::Avatar.image, width: 100 %>
+      <% end %>
     </div>
   </div>
   <div class="pt-3">
