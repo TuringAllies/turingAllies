@@ -2,7 +2,11 @@
 <div class="my-grid">
   <% @users.map do |user| %>
     <div class="card" style="width: 18rem;">
-      <img src="<%= Faker::Avatar.image %>" class="card-img-top" alt="...">
+      <% if user.avatar.attached? %>
+        <img src="<%= url_for(user.avatar) %>" class="card-img-top" alt="...">
+      <% else %>
+        <img src="<%= Faker::Avatar.image %>" class="card-img-top" alt="...">
+      <% end %>
       <div class="card-body">
         <h5 class="card-title"><%= user.full_name %></h5>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
