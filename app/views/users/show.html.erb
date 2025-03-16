@@ -9,19 +9,26 @@
       </div>
       <p><%= mail_to @user.email %></p>
     </div>
-    <div class="border border-2 d-flex align-items-center p-2">
-      photo here
+    <div class="d-flex align-items-center p-2">
+      <% if @user.avatar.attached? %>
+        <%= image_tag @user.avatar, width: 100, alt: "User Avatar" %>
+      <% else %>
+        <%= image_tag Faker::Avatar.image, width: 100, alt: "Default Avatar" %>
+      <% end %>
     </div>
   </div>
-  <div class="pt-3">
-    <p><%= @user.bio %></p>
-  </div>
+  <% if @user.bio.present? %>
+    <div class="pt-3">
+      <p><%= @user.bio %></p>
+    </div>
+  <% end %>
   <div>
     <h2>Blog articles</h2>
     <%= link_to "New Article", new_user_article_path(@user) %>
     <% @user.articles.each do |article|  %>
       <div>
         <%= link_to article.title, user_article_path(user_id: @user, id: article.id) %>
+        <p><small>Created on: <%= article.created_at.strftime("%B %d, %Y") %></small></p>
       </div>
     <% end %>
   </div>
