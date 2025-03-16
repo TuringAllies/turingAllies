@@ -6,6 +6,7 @@ class User < ApplicationRecord
   devise :omniauthable, omniauth_providers: %i[github]
 
   has_many :articles
+  has_one_attached :avatar
 
   def self.from_omniauth(auth)
     if auth.info.email.present?

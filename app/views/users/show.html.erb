@@ -11,9 +11,9 @@
     </div>
     <div class="d-flex align-items-center p-2">
       <% if @user.avatar.attached? %>
-        <%= image_tag @user.avatar, width: 100, alt: "User Avatar" %>
+        <%= image_tag @user.avatar, width: 100 %>
       <% else %>
-        <%= image_tag Faker::Avatar.image, width: 100, alt: "Default Avatar" %>
+        <%= image_tag Faker::Avatar.image, width: 100 %>
       <% end %>
     </div>
   </div>

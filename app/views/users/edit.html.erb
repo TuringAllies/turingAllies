@@ -47,6 +47,12 @@
       <div><%= form.text_area :bio %></div>
     </div>
     <div>
+      <div>
+        <%= form.label :avatar, "profile photo" %>
+        <%= form.file_field :avatar %>
+      </div>
+    </div>
+    <div>
       <%= form.submit %>
       <%= link_to "Cancel", user_path(@user), class: "btn btn-secondary" %>
     </div>
